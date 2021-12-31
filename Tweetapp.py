@@ -5,6 +5,7 @@ import tweepy
 from textblob import TextBlob
 from wordcloud import WordCloud
 import pandas as pd
+import numpy as np
 import re
 import matplotlib.pyplot as plt
 from PIL import Image
@@ -31,7 +32,7 @@ def main():
     </div>
     """
     st.markdown(html_temp, unsafe_allow_html=True)
-    image = Image.open(r'C:\Users\ADMIN\Desktop\banner.jpg')
+    image = Image.open('banner.jpg')
     st.image(image,use_column_width=True)
     st.title("Tweet Sentiment Analyzer🔥")
     options = ["About this App","Tweet Analysis","Generate twitter data"]
@@ -166,6 +167,6 @@ def main():
 
                 df = get_data(raw_text)
                 st.write(df)
-    st.subheader(">>>>>>>>>>>>Done by Kalyani Chava<<<<<<<<<<<<<")
+    st.subheader(">>>>>>>>>>>>Made by Charan Solasu😊<<<<<<<<<<<<<")
 if __name__ == "__main__":
 	main()
